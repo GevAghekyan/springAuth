@@ -4,6 +4,7 @@ import com.example.springAuth.facade.person.PersonDTO;
 import com.example.springAuth.persistance.entities.Address;
 import com.example.springAuth.persistance.entities.Person;
 import com.example.springAuth.persistance.repos.PersonRepo;
+import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +19,20 @@ public class PersonServiceImpl implements PersonService {
 
     @Autowired
     public PersonServiceImpl(PersonRepo personRepo) {
-        this.personRepo = personRepo;
+
+        try {
+            PersonDTO dto = new PersonDTO();
+            dto.setName("Gevorg");
+            dto.setUserName("admin");
+            dto.setPassword("admin");
+            dto.setRoles("ROLE_ADMIN");
+            dto.setActive(true);
+            personRepo.save(personFromDTO(dto));
+        } catch (Exception ex){
+            ex.getMessage();
+        }finally {
+            this.personRepo = personRepo;
+        }
     }
 
     @Override
@@ -98,6 +112,7 @@ public class PersonServiceImpl implements PersonService {
         personDTO.setId(person.getId());
         personDTO.setName(person.getName());
         personDTO.setAge(person.getAge());
+        personDTO.setRoles(person.getRoles());
         personDTO.setAddressId(person.getAddress().getId());
         personDTO.setCity(person.getAddress().getCity());
         personDTO.setStreet(person.getAddress().getStreet());

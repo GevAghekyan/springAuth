@@ -23,8 +23,17 @@ public class PersonFacade {
         this.personConverter = personConverter;
     }
 
-    public PersonResponseModel create(PersonRequestModel requestModel) {
+    public PersonResponseModel createUser(PersonRequestModel requestModel) {
         PersonDTO personDTO = personConverter.buildDataObjFromRequest(requestModel);
+        personDTO.setRoles("ROLE_USER");
+        PersonDTO savedDataObject = personService.create(personDTO);
+        PersonResponseModel responseModel = personConverter.buildResponseFromDataObj(savedDataObject);
+        return responseModel;
+    }
+
+    public PersonResponseModel createAdmin(PersonRequestModel requestModel) {
+        PersonDTO personDTO = personConverter.buildDataObjFromRequest(requestModel);
+        personDTO.setRoles("ROLE_ADMIN");
         PersonDTO savedDataObject = personService.create(personDTO);
         PersonResponseModel responseModel = personConverter.buildResponseFromDataObj(savedDataObject);
         return responseModel;

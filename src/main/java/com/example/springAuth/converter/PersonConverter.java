@@ -23,7 +23,6 @@ public class PersonConverter {
         personDTO.setStreet(requestModel.getStreet());
         personDTO.setUserName(requestModel.getUserName());
         personDTO.setPassword(requestModel.getPassword());
-        personDTO.setRoles(requestModel.getRoles());
         personDTO.setActive(true);
         return personDTO;
     }
@@ -33,6 +32,7 @@ public class PersonConverter {
         personResponseModel.setName(dataObject.getName());
         personResponseModel.setAge(dataObject.getAge());
         personResponseModel.setId(dataObject.getId());
+        personResponseModel.setRoles(dataObject.getRoles());
         AddressResponseModel addressResponseModel = new AddressResponseModel();
         addressResponseModel.setId(dataObject.getAddressId());
         addressResponseModel.setStreet(dataObject.getStreet());

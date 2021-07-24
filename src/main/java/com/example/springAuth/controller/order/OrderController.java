@@ -35,7 +35,7 @@ public class OrderController {
         return ResponseEntity.ok(responseModels);
     }
 
-    @DeleteMapping("/order/{id}")
+    @DeleteMapping("/order/delete/{id}")
     public void deleteById(@PathVariable Long id) {
         orderFacade.deleteById(id);
     }

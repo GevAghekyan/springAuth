@@ -7,6 +7,7 @@ public class PersonResponseModel {
     private Long id;
     private String name;
     private Integer age;
+    private String roles;
     private AddressResponseModel addressResponseModel;
 
     public String getName() {
@@ -33,6 +34,14 @@ public class PersonResponseModel {
         this.id = id;
     }
 
+    public String getRoles() {
+        return roles;
+    }
+
+    public void setRoles(String roles) {
+        this.roles = roles;
+    }
+
     public AddressResponseModel getAddressResponseModel() {
         return addressResponseModel;
     }
@@ -40,4 +49,5 @@ public class PersonResponseModel {
     public void setAddressResponseModel(AddressResponseModel addressResponseModel) {
         this.addressResponseModel = addressResponseModel;
     }
+
 }

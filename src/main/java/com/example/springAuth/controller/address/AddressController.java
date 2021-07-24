@@ -24,7 +24,7 @@ public class AddressController {
         return ResponseEntity.ok(byId);
     }
 
-    @GetMapping("addresses")
+    @GetMapping("/addresses")
     public ResponseEntity<ArrayList<AddressResponseModel>> getAll(){
         ArrayList<AddressResponseModel> responseModels = addressFacade.getAll();
         return ResponseEntity.ok(responseModels);

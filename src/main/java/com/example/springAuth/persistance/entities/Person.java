@@ -11,7 +11,9 @@ public class Person {
     private Long id;
     private String name;
     private Integer age;
+    @Column(unique = true)
     private String userName;
+    @Column(unique = true)
     private String password;
     private boolean active;
     private String roles;

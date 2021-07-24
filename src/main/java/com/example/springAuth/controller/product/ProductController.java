@@ -45,13 +45,13 @@ public class ProductController {
         return ResponseEntity.ok(allByName);
     }
 
-    @PutMapping("/product/{id}")
+    @PutMapping("/product/update/{id}")
     public ResponseEntity<ProductResponseModel> updateById(@RequestBody ProductRequestModel requestModel,@PathVariable Long id){
         ProductResponseModel updatedById = productFacade.updateById(requestModel, id);
         return ResponseEntity.ok(updatedById);
     }
 
-    @DeleteMapping("/product/{id}")
+    @DeleteMapping("/product/delete/{id}")
     public void deleteById(@PathVariable Long id){
         productFacade.deleteById(id);
     }

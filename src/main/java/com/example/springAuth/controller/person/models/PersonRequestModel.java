@@ -8,7 +8,6 @@ public class PersonRequestModel {
     private String street;
     private String userName;
     private String password;
-    private String roles;
 
     public String getName() {
         return name;
@@ -58,11 +57,4 @@ public class PersonRequestModel {
         this.password = password;
     }
 
-    public String getRoles() {
-        return roles;
-    }
-
-    public void setRoles(String roles) {
-        this.roles = roles;
-    }
 }

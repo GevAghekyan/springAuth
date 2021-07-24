@@ -19,9 +19,15 @@ public class PersonController {
         this.personFacade = personFacade;
     }
 
-    @PostMapping("/person")
-    public ResponseEntity<PersonResponseModel> create(@RequestBody PersonRequestModel requestModel) {
-        PersonResponseModel saved = personFacade.create(requestModel);
+    @PostMapping("/register")
+    public ResponseEntity<PersonResponseModel> createUser(@RequestBody PersonRequestModel requestModel) {
+        PersonResponseModel saved = personFacade.createUser(requestModel);
+        return ResponseEntity.ok(saved);
+    }
+
+    @PostMapping("/register/admin")
+    public ResponseEntity<PersonResponseModel> createAdmin(@RequestBody PersonRequestModel requestModel) {
+        PersonResponseModel saved = personFacade.createAdmin(requestModel);
         return ResponseEntity.ok(saved);
     }
 
@@ -50,13 +56,13 @@ public class PersonController {
         return ResponseEntity.ok(personByName);
     }
 
-    @PutMapping("/person/{id}")
+    @PutMapping("/person/update/{id}")
     public ResponseEntity<PersonResponseModel> updateById(@RequestBody PersonRequestModel requestModel,@PathVariable Long id){
         PersonResponseModel responseModel = personFacade.updateById(requestModel, id);
         return ResponseEntity.ok(responseModel);
     }
 
-    @DeleteMapping("/person/{id}")
+    @DeleteMapping("/person/delete/{id}")
     public void deleteById(@PathVariable Long id){
         personFacade.deleteById(id);
     }
