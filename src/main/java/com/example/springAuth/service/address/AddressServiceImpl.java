@@ -1,8 +1,8 @@
 package com.example.springAuth.service.address;
 
 import com.example.springAuth.facade.address.AddressDTO;
-import com.example.springAuth.persistance.entities.Address;
-import com.example.springAuth.persistance.repos.AddressRepo;
+import com.example.springAuth.persistence.entities.Address;
+import com.example.springAuth.persistence.repos.AddressRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

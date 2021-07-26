@@ -1,12 +1,12 @@
 package com.example.springAuth.service.order;
 
 import com.example.springAuth.facade.order.OrderDTO;
-import com.example.springAuth.persistance.entities.Order;
-import com.example.springAuth.persistance.entities.Person;
-import com.example.springAuth.persistance.entities.Product;
-import com.example.springAuth.persistance.repos.OrderRepo;
-import com.example.springAuth.persistance.repos.PersonRepo;
-import com.example.springAuth.persistance.repos.ProductRepo;
+import com.example.springAuth.persistence.entities.Order;
+import com.example.springAuth.persistence.entities.Person;
+import com.example.springAuth.persistence.entities.Product;
+import com.example.springAuth.persistence.repos.OrderRepo;
+import com.example.springAuth.persistence.repos.PersonRepo;
+import com.example.springAuth.persistence.repos.ProductRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,8 +1,8 @@
 package com.example.springAuth.service.product;
 
 import com.example.springAuth.facade.product.ProductDTO;
-import com.example.springAuth.persistance.entities.Product;
-import com.example.springAuth.persistance.repos.ProductRepo;
+import com.example.springAuth.persistence.entities.Product;
+import com.example.springAuth.persistence.repos.ProductRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package com.example.springAuth.persistance.entities;
+package com.example.springAuth.persistence.entities;
 
 import javax.persistence.*;
 import java.util.List;

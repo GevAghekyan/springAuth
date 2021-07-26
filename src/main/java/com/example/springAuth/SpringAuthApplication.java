@@ -1,6 +1,6 @@
 package com.example.springAuth;
 
-import com.example.springAuth.persistance.repos.PersonRepo;
+import com.example.springAuth.persistence.repos.PersonRepo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;

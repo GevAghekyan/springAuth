@@ -1,6 +1,6 @@
-package com.example.springAuth.persistance.repos;
+package com.example.springAuth.persistence.repos;
 
-import com.example.springAuth.persistance.entities.Person;
+import com.example.springAuth.persistence.entities.Person;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.ArrayList;

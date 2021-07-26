@@ -1,7 +1,7 @@
 package com.example.springAuth.security;
 
-import com.example.springAuth.persistance.entities.Person;
-import com.example.springAuth.persistance.repos.PersonRepo;
+import com.example.springAuth.persistence.entities.Person;
+import com.example.springAuth.persistence.repos.PersonRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

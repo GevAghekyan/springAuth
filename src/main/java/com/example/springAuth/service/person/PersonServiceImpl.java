@@ -1,10 +1,9 @@
 package com.example.springAuth.service.person;
 
 import com.example.springAuth.facade.person.PersonDTO;
-import com.example.springAuth.persistance.entities.Address;
-import com.example.springAuth.persistance.entities.Person;
-import com.example.springAuth.persistance.repos.PersonRepo;
-import org.hibernate.exception.ConstraintViolationException;
+import com.example.springAuth.persistence.entities.Address;
+import com.example.springAuth.persistence.entities.Person;
+import com.example.springAuth.persistence.repos.PersonRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

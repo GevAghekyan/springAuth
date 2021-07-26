@@ -1,6 +1,6 @@
 package com.example.springAuth.security;
 
-import com.example.springAuth.persistance.entities.Person;
+import com.example.springAuth.persistence.entities.Person;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
