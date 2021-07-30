@@ -18,20 +18,7 @@ public class PersonServiceImpl implements PersonService {
 
     @Autowired
     public PersonServiceImpl(PersonRepo personRepo) {
-
-        try {
-            PersonDTO dto = new PersonDTO();
-            dto.setName("Gevorg");
-            dto.setUserName("admin");
-            dto.setPassword("admin");
-            dto.setRoles("ROLE_ADMIN");
-            dto.setActive(true);
-            personRepo.save(personFromDTO(dto));
-        } catch (Exception ex){
-            ex.getMessage();
-        }finally {
-            this.personRepo = personRepo;
-        }
+        this.personRepo = personRepo;
     }
 
     @Override
